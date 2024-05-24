@@ -1,4 +1,3 @@
-console.log("Hello World")
 
 let humanScore = 0;
 let computerScore = 0;
@@ -32,27 +31,58 @@ function playRound(humanChoice, computerChoice) {
         return "It's a tie"
 
     if (humanChoice == "rock") {
-        if (computerChoice == "scissors")
+
+        if (computerChoice == "scissors") {
+            humanScore++;
             return "You won this round"
+        }
+        computerScore++;
         return "You lost this round"
     }
 
     if (humanChoice == "paper") {
-        if (computerChoice == "rock")
+        if (computerChoice == "rock") {
+            humanScore++;
             return "You won this round"
+        }
+        computerScore++;
         return "You lost this round"
     }
 
     if (humanChoice == "scissors") {
-        if (computerChoice == "paper")
+        if (computerChoice == "paper") {
+            humanScore++;
             return "You won this round"
+        }
+        computerScore++;
         return "You lost this round"
     }
+
+    return "unvalid";
+
+
 }
 
-let humanSelection = getHumanChoice();
-let computerSelection = getComputerChoice();
 
 
-console.log(playRound(humanSelection, computerSelection))
 
+
+function playGame() {
+    for (let i = 0; i < 5; i++) {
+
+        let humanSelection = getHumanChoice();
+        let computerSelection = getComputerChoice();
+
+        playRound(humanSelection, computerSelection)
+
+        if (humanScore == 3 || computerScore == 3)
+            break;
+    }
+
+    if (humanScore > computerScore)
+        return "You won the Game"
+    else
+        return "You lost the Game"
+}
+
+console.log(playGame())
