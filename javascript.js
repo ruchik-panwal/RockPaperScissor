@@ -17,6 +17,7 @@ function getComputerChoice() {
 
 const btns = document.querySelectorAll("button");
 const round = document.querySelector("#result");
+const final = document.querySelector("#final");
 
 
 btns.forEach((button) => {
@@ -32,13 +33,22 @@ btns.forEach((button) => {
         else
             round.textContent = playRound("scissors", getComputerChoice());
 
+
+        if (humanScore > 4) {
+
+            humanScore = computerScore = 0;
+            final.textContent = "You Win!" ;
+        }
+        else if (computerScore > 5)
+            {
+                humanScore = computerScore = 0;
+            final.textContent = "You Lost!" ;
+            }
+
+
         const score = document.querySelector("#score");
         score.textContent = "Human = " + humanScore + " ; Computer = " + computerScore;
 
-        if(humanScore > 5 )
-            {
-                
-            }
 
 
     })
