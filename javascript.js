@@ -18,6 +18,7 @@ function getComputerChoice() {
 const btns = document.querySelectorAll("button");
 const round = document.querySelector("#result");
 
+
 btns.forEach((button) => {
 
     button.addEventListener("click", () => {
@@ -25,11 +26,21 @@ btns.forEach((button) => {
         if (button.id == "Rock")
             round.textContent = playRound("rock", getComputerChoice());
 
-        else if(button.id == "Paper")
+        else if (button.id == "Paper")
             round.textContent = playRound("paper", getComputerChoice());
 
         else
             round.textContent = playRound("scissors", getComputerChoice());
+
+        const score = document.querySelector("#score");
+        score.textContent = "Human = " + humanScore + " ; Computer = " + computerScore;
+
+        if(humanScore > 5 )
+            {
+                
+            }
+
+
     })
 })
 
@@ -75,6 +86,7 @@ function playRound(humanChoice, computerChoice) {
         computerScore++;
         return "You lost this round"
     }
+
 
 
 
