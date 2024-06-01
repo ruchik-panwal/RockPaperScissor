@@ -20,6 +20,7 @@ const round = document.querySelector("#result");
 const final = document.querySelector("#final");
 
 
+
 btns.forEach((button) => {
 
     button.addEventListener("click", () => {
@@ -39,7 +40,7 @@ btns.forEach((button) => {
             humanScore = computerScore = 0;
             final.textContent = "You Win!" ;
         }
-        else if (computerScore > 5)
+        else if (computerScore > 4)
             {
                 humanScore = computerScore = 0;
             final.textContent = "You Lost!" ;
