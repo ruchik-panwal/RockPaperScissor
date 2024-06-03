@@ -1,3 +1,25 @@
-.title{
-    font-size: 500;
+body{
+    background-color: #1C1C1C;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 }
+
+.title{
+    text-align: center;
+    font-family:  "Black Ops One", system-ui;
+    background-color: white;
+    color: #1C1C1C;
+    font-weight: bold;
+    font-size: 128px;
+}
+
+.consoleBody{
+    background-color: orange;
+}
+
+
+
+
+
+

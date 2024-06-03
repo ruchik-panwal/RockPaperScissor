@@ -25,7 +25,15 @@ btns.forEach((button) => {
 
     button.addEventListener("click", () => {
 
-        if (button.id == "Rock")
+        const score = document.querySelector("#score");
+
+        if(button.id == "Reset"){
+            round.textContent = "";
+            humanScore = 0;
+            computerScore = 0;            
+        }
+
+        else if (button.id == "Rock")
             round.textContent = playRound("rock", getComputerChoice());
 
         else if (button.id == "Paper")
@@ -47,7 +55,7 @@ btns.forEach((button) => {
             }
 
 
-        const score = document.querySelector("#score");
+       
         score.textContent = "Human = " + humanScore + " ; Computer = " + computerScore;
 
 
