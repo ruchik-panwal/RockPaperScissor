@@ -1,25 +1,47 @@
-body{
+body {
     background-color: #1C1C1C;
     margin: 0;
     display: flex;
     flex-direction: column;
 }
 
-.title{
+.title {
     text-align: center;
-    font-family:  "Black Ops One", system-ui;
+    font-family: "Black Ops One", system-ui;
     background-color: white;
     color: #1C1C1C;
     font-weight: bold;
-    font-size: 128px;
+    font-size: 500%;
 }
 
-.consoleBody{
-    background-color: orange;
+.consoleBody {
+    display: flex;
+    flex-direction: column;
+    background-color: #FF5F1F;
+    align-self: center;
+    margin: 50px;
+    width: 1200px;
+    flex-basis: 700px;
+
+    border-radius: 50px;
+    padding: 20px;
 }
 
+.screen {
+    background-color: #1C1C1C;
+    width: 1200px;
+    height: 625px;
+    border-radius: 40px;
 
+    align-self: center;
+}
 
+button {
+    margin: 20px 20px 0 20px;
+    height: 70px;
+    width: 70px;
+    border-radius: 100px;
 
+}
 
 
