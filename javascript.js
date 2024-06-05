@@ -20,8 +20,6 @@ const round = document.querySelector("#result");
 const final = document.querySelector("#final");
 const Cscore = document.querySelector("#Cscore");
 const Hscore = document.querySelector("#Hscore");
-const humanUi = document.querySelector("#humanUi");
-const computerUi = document.querySelector("#computerUi");
 
 
 
@@ -29,6 +27,8 @@ const computerUi = document.querySelector("#computerUi");
 btns.forEach((button) => {
 
     button.addEventListener("click", () => {
+
+
 
         const compChoice = getComputerChoice();
 
@@ -39,7 +39,7 @@ btns.forEach((button) => {
             humanUi.textContent = computerUi.textContent = "";
         }
 
-        else if (button.id == "Rock"){
+        else if (button.id == "Rock") {
             round.textContent = playRound("rock", compChoice);
         }
         else if (button.id == "Paper")
@@ -61,8 +61,8 @@ btns.forEach((button) => {
 
 
 
-        Hscore.textContent = "PLAYER = " + humanScore ;
-        Cscore.textContent = "COMPUTER = " + computerScore ;
+        Hscore.textContent = "PLAYER = " + humanScore;
+        Cscore.textContent = "COMPUTER = " + computerScore;
 
 
 
@@ -83,7 +83,7 @@ function playRound(humanChoice, computerChoice) {
 
     if (humanChoice == computerChoice)
         return "It's a tie"
-    
+
     if (humanChoice == "rock") {
 
         if (computerChoice == "scissors") {
