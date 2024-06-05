@@ -6,6 +6,12 @@ body {
     flex-direction: column;
 }
 
+i{
+    color : wheat;
+    font-size: 40px;
+}
+
+
 .title {
     text-align: center;
     font-family: "Black Ops One", system-ui;
@@ -25,20 +31,90 @@ body {
     margin: 50px 50px 0 50px;
     border-radius: 50px;
     padding: 20px;
-    
 }
 
 
  .screen {
     background-image: url(/home/ruchik/Desktop/Projects/RockPaperScissor/images/screen.jpeg);
     
-    flex-shrink: 1;
-    flex-basis: 600px;
     
+    flex-basis: 600px;
+    width: 1000px;
     
     border-radius: 40px;
     align-self: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
+.screenTitle,.dash2, .dash, .dash3, #result, .name , #Hscore, #Cscore{
+    font-family: "Press Start 2P", system-ui;
+    text-align: center;
+    margin-top: 15px;
+    color:#9bbc0f;
+    font-size: 20px;
+}
+
+.dash2{
+    font-size: 50px;
+}
+
+.screenTitle{
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.dash, .dash3{
+    margin-top: 2px;
+}
+
+#result , #Hscore, #Cscore{
+    
+    margin: 10px;
+}
+
+
+.resultScreen{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.sUi{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+
+.screenUi{
+    border-style: solid;
+    border-color: #9bbc0f;
+    border-radius: 20px;
+    border-width: 10px;
+    
+
+    width: 200px;
+    height: 200px;
+
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phase3{
+    margin : 15px;
+}
+
+.dash2{
+    margin: 20px;
+    align-self: center;
+}
+
+
 
 button {
     margin: 20px 20px 0 20px;
@@ -54,14 +130,13 @@ button {
     text-decoration: none;
 }
 
-i{
-    color : wheat;
-    font-size: 40px;
-}
 
 .allButtons{
     display: flex;
     justify-content: space-between; 
 }
 
-
+#symUi{
+    color: #9bbc0f;
+    font-size: 100px;
+}

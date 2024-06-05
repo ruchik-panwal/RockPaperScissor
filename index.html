@@ -9,14 +9,19 @@
     <link rel="stylesheet" href="style.css">
     <script src="javascript.js" defer></script>
 
-
+    <!-- title font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Press+Start+2P&display=swap"
         rel="stylesheet">
 
+    <!-- icons -->
     <script src="https://kit.fontawesome.com/befdb26257.js" crossorigin="anonymous"></script>
 
+    <!-- retro font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -26,9 +31,42 @@
     <div class="consoleBody">
 
         <div class="screen">
-            <div id="result"></div>
-            <div id="score"></div>
-            <div id="final"></div>
+
+            <div>
+                <div class="screenTitle">ROCK PAPER SCISSORS</div>
+                <div  class="dash">--------------------------------------</div>
+            </div>
+
+            <div class="resultScreen">
+
+                <div class="sUi">
+                    <div class="screenUi" id="humanUi"><i class="fa-regular fa-hand-back-fist" id = "symUi"></i></div>
+                    <div class="name" >PLAYER</div>
+                </div>
+                
+                <div class="dash2">-</div>
+                
+                <div class="sUi">
+                    <div class="screenUi" id="computerUi"></div>
+                    <div class="name">COMPUTER</div>
+                </div>
+
+            </div>
+
+            
+
+            <div class = "phase3">
+
+            <div class="allScores">
+                <div id="Hscore">PLAYER = </div>
+                <div id="Cscore">COMPUTER = </div>
+            </div>
+                
+                <div  class="dash3">--------------------------------------</div>
+                <div id="result">S T A R T</div>
+            </div>
+
+
         </div>
 
         <div class="allButtons">

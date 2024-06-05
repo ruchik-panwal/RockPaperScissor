@@ -18,6 +18,11 @@ function getComputerChoice() {
 const btns = document.querySelectorAll("button");
 const round = document.querySelector("#result");
 const final = document.querySelector("#final");
+const Cscore = document.querySelector("#Cscore");
+const Hscore = document.querySelector("#Hscore");
+const humanUi = document.querySelector("#humanUi");
+const computerUi = document.querySelector("#computerUi");
+
 
 
 
@@ -25,38 +30,39 @@ btns.forEach((button) => {
 
     button.addEventListener("click", () => {
 
-        const score = document.querySelector("#score");
+        const compChoice = getComputerChoice();
 
-        if(button.id == "Reset"){
-            round.textContent = "";
+        if (button.id == "Reset") {
+            round.textContent = "S T A R T";
             humanScore = 0;
-            computerScore = 0;            
+            computerScore = 0;
+            humanUi.textContent = computerUi.textContent = "";
         }
 
-        else if (button.id == "Rock")
-            round.textContent = playRound("rock", getComputerChoice());
-
+        else if (button.id == "Rock"){
+            round.textContent = playRound("rock", compChoice);
+        }
         else if (button.id == "Paper")
-            round.textContent = playRound("paper", getComputerChoice());
+            round.textContent = playRound("paper", compChoice);
 
         else
-            round.textContent = playRound("scissors", getComputerChoice());
+            round.textContent = playRound("scissors", compChoice);
 
 
         if (humanScore > 4) {
 
             humanScore = computerScore = 0;
-            final.textContent = "You Win!" ;
+            round.textContent = "You Win!";
         }
-        else if (computerScore > 4)
-            {
-                humanScore = computerScore = 0;
-            final.textContent = "You Lost!" ;
-            }
+        else if (computerScore > 4) {
+            humanScore = computerScore = 0;
+            round.textContent = "You Lost!";
+        }
 
 
-       
-        score.textContent = "Human = " + humanScore + " ; Computer = " + computerScore;
+
+        Hscore.textContent = "PLAYER = " + humanScore ;
+        Cscore.textContent = "COMPUTER = " + computerScore ;
 
 
 
@@ -77,7 +83,7 @@ function playRound(humanChoice, computerChoice) {
 
     if (humanChoice == computerChoice)
         return "It's a tie"
-
+    
     if (humanChoice == "rock") {
 
         if (computerChoice == "scissors") {
