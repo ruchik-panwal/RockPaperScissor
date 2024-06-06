@@ -91,19 +91,34 @@ btns.forEach((button) => {
 
 function playRound(humanChoice, computerChoice) {
 
-    if (humanChoice == computerChoice){
-        
-        if(humanChoice == "rock"){
+    if (humanChoice == computerChoice) {
+
+        const cRockIco = document.createElement("i");
+        cRockIco.classList.add("fa-regular", "fa-hand-back-fist");
+        cRockIco.id = 'symUi';
+
+        const cPaperIco = document.createElement("i");
+        cPaperIco.classList.add("fa-regular", "fa-hand");
+        cPaperIco.id = 'symUi';
+
+        const cScissorsIco = document.createElement("i");
+        cScissorsIco.classList.add("fa-regular", "fa-hand-scissors");
+        cScissorsIco.id = 'symUi';
+
+        if (computerChoice == "rock") {
+
+            computerUi.appendChild(cRockIco);
             humanUi.appendChild(rockIco);
-            computerUi.appendChild(rockIco);
         }
-        else if(humanChoice == "paper"){
+        else if (computerChoice == "paper") {
+
+            computerUi.appendChild(cPaperIco);
             humanUi.appendChild(paperIco);
-            computerUi.appendChild(paperIco);
         }
-        else{
+        else {
+
+            computerUi.appendChild(cScissorsIco);
             humanUi.appendChild(scissorsIco);
-            computerUi.appendChild(scissorsIco);
         }
         return "It's a tie"
     }
